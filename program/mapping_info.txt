@@ -1,0 +1,24 @@
+Rectangle 0
+Height: 281.0px
+Width: 315.0px
+x: 208.0
+y: 133.0
+
+Rectangle 1
+Height: 368.0px
+Width: 216.0px
+x: 850.0
+y: 362.0
+
+Rectangle 2
+Height: 332.0px
+Width: 298.0px
+x: 445.0
+y: 542.0
+
+Rectangle 3
+Height: 259.0px
+Width: 179.0px
+x: 90.0
+y: 488.0
+
