@@ -14,28 +14,14 @@ long duration, distance, BackSensor,FrontSensor;
 // User stub
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
 
-Task taskSendMessage( TASK_SECOND * 0.2 , TASK_FOREVER, &sendMessage );
+//Task taskSendMessage( TASK_SECOND * 0.2 , TASK_FOREVER, &sendMessage );
 
-void sendMessage() {
-  String msg = "NONE";
-  msg += mesh.getNodeId();
-  
-  if(toSend == 1)
-  {
-    wasOn = 1;
-    msg = "IN";
-    mesh.sendBroadcast( msg );
-    msg = "NONE";
-    Serial.println("IN");
-    toSend = 0;
-  }
 
-  //taskSendMessage.setInterval( TASK_SECOND * 0.2);
-}
 
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+  //Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+  Serial.println(msg.c_str());
 }
 
 void newConnectionCallback(uint32_t nodeId) {
@@ -62,8 +48,8 @@ void setup()
   mesh.onChangedConnections(&changedConnectionCallback);
   mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
   
-  userScheduler.addTask( taskSendMessage );
-  taskSendMessage.enable();
+ // userScheduler.addTask( taskSendMessage );
+  //taskSendMessage.enable();
 }
 
 void loop() {
