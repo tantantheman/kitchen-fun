@@ -109,6 +109,7 @@ void draw() {
          displayData[i].g = random(255);
          displayData[i].b = random(255);
       }
+      delay(500);
       //what to do when activity at the DOOR
     }
     if (val.compareTo(microwaveOn) == 0)
@@ -119,7 +120,8 @@ void draw() {
         displayData[i].r = 255;
         displayData[i].g = random(255);
         displayData[i].b = 0;
-      }        
+      }       
+      delay(500);
     
     if (val.compareTo(microwaveOff) == 0)
     {
@@ -140,6 +142,7 @@ void draw() {
         displayData[i].g = 102;
         displayData[i].b = random(255);
       }    
+      delay(500);
     }
     if (val.compareTo(fridgeRelease) == 0)
     {
@@ -161,6 +164,7 @@ void draw() {
         displayData[i].g = 255;
         displayData[i].b = 255;
       }
+      delay(500);
      // systems.add(new ParticleSystem(1, new PVector(598.75, height-295.0)));
     }
     if (val.compareTo(cabinetClosed) == 0)
@@ -172,7 +176,8 @@ void draw() {
         displayData[i].r = random(255);
         displayData[i].g = random(255);
         displayData[i].b = random(255);
-      }    
+      }
+      delay(500);
     }
   }
 }

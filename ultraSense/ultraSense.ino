@@ -27,11 +27,11 @@ long duration, distance, BackSensor,FrontSensor;
 // User stub
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
 
-Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
+Task taskSendMessage( TASK_SECOND * 100 , TASK_FOREVER, &sendMessage );
 
 void sendMessage() {
   String msg = "IN";
-  msg += mesh.getNodeId();
+  //msg += mesh.getNodeId();
   
   if(toSend == 1)
   {
@@ -54,19 +54,19 @@ void sendMessage() {
 
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+  //Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
 }
 
 void newConnectionCallback(uint32_t nodeId) {
-    Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
+    //Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
 }
 
 void changedConnectionCallback() {
-  Serial.printf("Changed connections\n");
+  //Serial.printf("Changed connections\n");
 }
 
 void nodeTimeAdjustedCallback(int32_t offset) {
-    Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
+    //Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
 }
 
 
@@ -95,22 +95,11 @@ void loop() {
   SonarSensor(trigPin2, echoPin2);
   BackSensor = distance;
 
-  Serial.println(FrontSensor);
+  //Serial.println(FrontSensor);
   //Serial.println(BackSensor);
   //Serial.println("");
   //delay(100);
 
-  /*difference = FrontSensor - BackSensor;
-
-  if (difference > newHigh)
-  {
-    newHigh = difference;
-  }
-  if (difference < newLow)
-  {
-    newLow = difference;
-  }
-  */
  
   if (FrontSensor < 50 )
   {
@@ -118,7 +107,7 @@ void loop() {
     toSend = 1;
     //Serial.println("Forward IN");
     //Serial.println("");
-    delay(1000);
+    delay(500);
   }
 
 
