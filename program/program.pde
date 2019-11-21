@@ -7,6 +7,8 @@ int rectA, rectB, rectC, rectD;
 boolean isDrawing = false;
 PrintWriter output;
 
+int finishedDrawing;
+
 String microwaveOn = "Microwave On" ;
 String microwaveOff = "Microwave Off";
 
@@ -44,31 +46,8 @@ class Display {
     // draw the rectangle with fill
     fill(color(r, b, g));
     rect(x, y, dWidth, dHeight);
-    // draw the text
-    addText();
   }
   
-  void addText() {
-    String topLeft = "(" + x + ", " + y + ")";
-    String bottomRight = "(" + (x + dWidth) + ", " + (y + dHeight) + ")";
-    float brWidth = textWidth(bottomRight);
-    float tlHeight = 16;
-    PFont f;
-    f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
-    textFont(f);
-    fill(color(0,0,0));
-    
-    text(pos, x + dWidth/2, y + dHeight/2);
-    
-    //if (dWidth < brWidth*2 & dHeight < tlHeight*2) {
-    //  text(topLeft, x, y); 
-    //  text(bottomRight, x + dWidth, y + dHeight);
-    //}
-    //else {
-    //  text(topLeft, x, y+20); 
-    //  text(bottomRight, x + dWidth - brWidth, y + dHeight);
-    //}
-  }
 
   void clear() {
     exists = false;
@@ -103,15 +82,14 @@ void draw() {
     }
   }
   
-    PFont f;
-    f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
-    textFont(f);
-    //strokeWeight(3);
-    //stroke(color(250, 50, 50));
+    if (finishedDrawing == 0)
+    {
     line(mouseX, 0, mouseX, height);
     line(0, mouseY, width, mouseY);
+    
     text( "x: " + mouseX + " y: " + mouseY, mouseX, mouseY );
     fill(0, 0, 0);
+    }
     
     if ( myPort.available() > 0) 
   {  // If data is available,
@@ -165,7 +143,13 @@ void draw() {
     }
     if (val.compareTo(fridgeRelease) == 0)
     {
-      //what to do when fridge is RELEASED
+      strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = random(255);
+        displayData[i].g = random(255);
+        displayData[i].b = random(255);
+      }        
     }
     if (val.compareTo(cabinetOpen) == 0)
     {
@@ -264,7 +248,7 @@ void keyPressed() {
     }
   }
   // exit
-  if (key == 'e' || key == 'E') {
+  if (key == ESC) {
     exit();
   }
   if (key == 'd' || key == 'D')
@@ -295,7 +279,7 @@ void keyPressed() {
     for (int i = 0; i<count; i++)
     {
       displayData[i].r = 0;
-      displayData[i].g = 102;
+      displayData[i].g = 0;
       displayData[i].b = random(255);
     }
   }
@@ -311,6 +295,10 @@ void keyPressed() {
     }
   }
   
+  if (key == 'g' || key == 'G')
+  {
+    finishedDrawing = 1;
+  }
   
   
 }
