@@ -122,32 +122,46 @@ void draw() {
   {
     val = trim(val);
     println(val);
-   // println(val.compareTo("IN"));
-    // break up the decimal and new line reading
-    //int[] vals = int(splitTokens(val, ","));
-    //if (val.compareTo(microwaveOn) == 0 || microwave == 1)
-    if (microwave == 1)
-    {
-      //systems.add(new ParticleSystem(1, new PVector(mouseX, mouseY)));
-    //if (val.compareTo(microwaveOff) == 0 || microwave == 0)
-    if (microwave == 0)
-    {
-      //what to do when microwave is OFF
-    }
+    
     if (val.compareTo("IN") == 0)
     {
       for (int i = 0; i< count; i++)
       {
          displayData[i].r = random(255);
-
+         displayData[i].g = random(255);
+         displayData[i].b = random(255);
       }
-      println("ddoinga");
-
       //what to do when activity at the DOOR
+    }
+    if (val.compareTo(microwaveOn) == 0)
+    {
+       strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = 255;
+        displayData[i].g = random(255);
+        displayData[i].b = 0;
+      }        
+    
+    if (val.compareTo(microwaveOff) == 0)
+    {
+      strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = random(255);
+        displayData[i].g = random(255);
+        displayData[i].b = random(255);
+      }    
     }
     if (val.compareTo(fridgeTouch) == 0)
     {
-      //what to do when fridge is TOUCHED
+      strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = 0;
+        displayData[i].g = 102;
+        displayData[i].b = random(255);
+      }    
     }
     if (val.compareTo(fridgeRelease) == 0)
     {
@@ -156,12 +170,25 @@ void draw() {
     if (val.compareTo(cabinetOpen) == 0)
     {
       //what to do when cabinet is OPEN
-      
+      strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = 255;
+        displayData[i].g = 255;
+        displayData[i].b = 255;
+      }
      // systems.add(new ParticleSystem(1, new PVector(598.75, height-295.0)));
     }
     if (val.compareTo(cabinetClosed) == 0)
     {
       //what to do when cabinet is CLOSED
+      strokeWeight(0);
+      for (int i = 0; i<count; i++)
+      {
+        displayData[i].r = random(255);
+        displayData[i].g = random(255);
+        displayData[i].b = random(255);
+      }    
     }
   }
 }
@@ -225,13 +252,13 @@ void mouseMoved() {
 
 void keyPressed() {
   // save frame
-  if (key == 'c' || key == 'C') {
+  if (key == 's' || key == 'S') {
     saveFrame("mapping-###.png");
     output.flush();
     output.close();
   }
   // clear all displays
-  if (key == 'd' || key == 'D') {
+  if (key == 'q' || key == 'Q') {
     for (int i = 0; i < count; i = i+1) {
       displayData[i].clear();
     }
@@ -240,12 +267,50 @@ void keyPressed() {
   if (key == 'e' || key == 'E') {
     exit();
   }
-  if (key == 'm' || key == 'M')
+  if (key == 'd' || key == 'D')
   {
     strokeWeight(0);
     for (int i = 0; i<count; i++)
     {
       displayData[i].r = random(255);
+      displayData[i].g = random(255);
+      displayData[i].b = random(255);
     }
   }
+  
+  if (key == 'm' || key == 'M')
+  {
+    strokeWeight(0);
+    for (int i = 0; i<count; i++)
+    {
+      displayData[i].r = 255;
+      displayData[i].g = random(255);
+      displayData[i].b = 0;
+    }
+  }
+  
+  if (key == 'f' || key == 'F')
+  {
+    strokeWeight(0);
+    for (int i = 0; i<count; i++)
+    {
+      displayData[i].r = 0;
+      displayData[i].g = 102;
+      displayData[i].b = random(255);
+    }
+  }
+  
+  if (key == 'c' || key == 'C')
+  {
+    strokeWeight(0);
+    for (int i = 0; i<count; i++)
+    {
+      displayData[i].r = 255;
+      displayData[i].g = 255;
+      displayData[i].b = 255;
+    }
+  }
+  
+  
+  
 }

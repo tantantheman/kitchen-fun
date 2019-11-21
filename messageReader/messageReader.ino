@@ -7,16 +7,10 @@
 Scheduler userScheduler; // to control your personal task
 painlessMesh  mesh;
 
-
-
-long duration, distance, BackSensor,FrontSensor;
-
 // User stub
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
 
 //Task taskSendMessage( TASK_SECOND * 0.2 , TASK_FOREVER, &sendMessage );
-
-
 
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
