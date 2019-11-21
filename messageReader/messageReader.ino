@@ -21,19 +21,20 @@ void sendMessage() ; // Prototype so PlatformIO doesn't complain
 // Needed for painless library
 void receivedCallback( uint32_t from, String &msg ) {
   //Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+  //Serial.printf("%s\n",msg.c_str());
   Serial.println(msg.c_str());
 }
 
 void newConnectionCallback(uint32_t nodeId) {
-    Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
+    //Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
 }
 
 void changedConnectionCallback() {
-  Serial.printf("Changed connections\n");
+  //Serial.printf("Changed connections\n");
 }
 
 void nodeTimeAdjustedCallback(int32_t offset) {
-    Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
+    //Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
 }
 
 
