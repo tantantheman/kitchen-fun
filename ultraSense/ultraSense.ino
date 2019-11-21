@@ -27,18 +27,16 @@ long duration, distance, BackSensor,FrontSensor;
 // User stub
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
 
-Task taskSendMessage( TASK_SECOND * 0.2 , TASK_FOREVER, &sendMessage );
+Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
 
 void sendMessage() {
-  String msg = "NONE";
+  String msg = "IN";
   msg += mesh.getNodeId();
   
   if(toSend == 1)
   {
     wasOn = 1;
-    msg = "IN";
     mesh.sendBroadcast( msg );
-    msg = "NONE";
     Serial.println("IN");
     toSend = 0;
   }
@@ -120,24 +118,9 @@ void loop() {
     toSend = 1;
     //Serial.println("Forward IN");
     //Serial.println("");
-    //delay(2000);
+    delay(1000);
   }
-  /*
-  else if (difference > 20)
-  {
-    isOccupied = 1;
-    toSend = 2;
-    //Serial.println("Backward OUT");
-    //Serial.println("");
-    //delay(2000);
-  }
-  if (isOccupied == 1 && ((FrontSensor - BackSensor < 10) || (BackSensor - FrontSensor < 10)))
-  {
-    isOccupied = 0;
-    //Serial.println("RESET"); 
-    //Serial.println("");
-  } 
- */
+
 
   mesh.update();
 
