@@ -1,0 +1,84 @@
+Rectangle 0
+Height: 164.0px
+Width: 978.0px
+x: 157.0
+y: 110.0
+
+Rectangle 1
+Height: 257.0px
+Width: 750.0px
+x: 130.0
+y: 295.0
+
+Rectangle 2
+Height: 116.0px
+Width: 274.0px
+x: 894.0
+y: 272.0
+
+Rectangle 3
+Height: 86.0px
+Width: 185.0px
+x: 116.0
+y: 586.0
+
+Rectangle 4
+Height: 125.0px
+Width: 95.0px
+x: 766.0
+y: 549.0
+
+Rectangle 5
+Height: 159.0px
+Width: 260.0px
+x: 937.0
+y: 437.0
+
+Rectangle 6
+Height: 202.0px
+Width: 260.0px
+x: 937.0
+y: 597.0
+
+Rectangle 7
+Height: 55.0px
+Width: 813.0px
+x: 97.0
+y: 675.0
+
+Rectangle 8
+Height: 68.0px
+Width: 212.0px
+x: 321.0
+y: 731.0
+
+Rectangle 9
+Height: 63.0px
+Width: 237.0px
+x: 669.0
+y: 736.0
+
+Rectangle 10
+Height: 82.0px
+Width: 444.0px
+x: 36.0
+y: 7.0
+
+Rectangle 11
+Height: 72.0px
+Width: 407.0px
+x: 837.0
+y: 16.0
+
+Rectangle 12
+Height: 492.0px
+Width: 131.0px
+x: 0.0
+y: 91.0
+
+Rectangle 13
+Height: 183.0px
+Width: 128.0px
+x: 1151.0
+y: 92.0
+

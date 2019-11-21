@@ -76,8 +76,8 @@ void draw() {
     PFont f;
     f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
     textFont(f);
-    strokeWeight(3);
-    stroke(color(250, 50, 50));
+    //strokeWeight(3);
+    //stroke(color(250, 50, 50));
     line(mouseX, 0, mouseX, height);
     line(0, mouseY, width, mouseY);
     text( "x: " + mouseX + " y: " + mouseY, mouseX, mouseY );
@@ -156,5 +156,13 @@ void keyPressed() {
   // exit
   if (key == 'e' || key == 'E') {
     exit();
+  }
+  if (key == 'm' || key == 'M')
+  {
+    strokeWeight(0);
+    for (int i = 0; i<count; i++)
+    {
+      displayData[i].r = random(255);
+    }
   }
 }
