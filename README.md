@@ -44,7 +44,7 @@ When the cabinet is opened, any changes in color immediately freeze and you can 
 
 When someone passes through the door next to the lounge, the rectangles erupt into all different colors, creating a vibrant palette reminiscent of a stereotypically painted house in the 1960's, or the set of Pee Wee Herman's Playhouse. 
  
-##Technical Difficulties: 
+## Technical Difficulties: 
 This was perhaps the most complex module in terms of execution. As a result, there were a few technical difficulties during the creation of the mesh network sensor and the visualization.  
 
 While the design of the ultrasonic sensor involved a small LiPo battery, the LiPo battery stopped taking a charge and thus a portable battery pack had to be swapped in during the actual deployment. In addition, the sensor initially had two ultrasonic sensors next to each other, and was able to detect entrance or exit from the doorway. However, there was an unknown issue with the wiring that prevented the second sensor from working properly. 
