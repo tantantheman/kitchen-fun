@@ -12,13 +12,13 @@ painlessMesh.h
 
 
 ## Mesh Network and Setup 
-As a four person team, we used four ESP32 devices to create four distinct sensors. They are placed in four places within the general kitchen space on the second floor of AK Watson Hall, designed for individual visualization/sonification that pertains to the usage of the space. They are: above the door, on the refridgerator, on the microwave, and inside a cabinet. I was responsible for creating the Ultrasonic Door Sensor. 
+As a four person team, we used four ESP32 devices to create four distinct sensors. They are placed in four places within the general kitchen space on the second floor of AK Watson Hall, designed for individual visualization/sonification that pertains to the usage of the space. They are: above the door, on the refrigerator, on the microwave, and inside a cabinet. I was responsible for creating the Ultrasonic Door Sensor. 
 
 - Cabinet Sensor  
 By using a modified button, we are able to detect when a specific cabinet in the kitchen is open, and when it is closed.  
 
 - Fridge Sensor  
-By transforming the handle of the refridgerator into a giant capacitive touch surface by covering it with aluminum foil and wiring it to an ESP32, we can know when the handle is being touched or released.  
+By transforming the handle of the refrigerator into a giant capacitive touch surface by covering it with aluminum foil and wiring it to an ESP32, we can know when the handle is being touched or released.  
 
 - Piezoelectric Sensor
 By attaching a piezoelectric sensor to the door release button of the microwave, we are able to know when the microwave is being used. 
@@ -42,7 +42,7 @@ The Processing visualization first allows for the mapping of the space, as a use
 The ultrasonic sensor code can be found in the "ultraSense" folder. All other sensor code can be found in the "Other Sensors" folder. 
 
 ## Visualization  
-For my visualization, I wanted to play with the blandness of the AKW Lounge Kitchen. The cabinets are a stark white, as are many of the applicances. The lounge is always a place of academic stress, where many departments hold office hours and people work on PSETs many hours into the night. Why not try to bring splashes of color into the space and make it fun?  
+For my visualization, I wanted to play with the blandness of the AKW Lounge Kitchen. The cabinets are a stark white, as are many of the appliances. The lounge is always a place of academic stress, where many departments hold office hours and people work on PSETs many hours into the night. Why not try to bring splashes of color into the space and make it fun?  
 
 ![alt text][work]
 
