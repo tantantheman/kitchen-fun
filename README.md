@@ -24,24 +24,29 @@ By transforming the handle of the refridgerator into a giant capacitive touch su
 By attaching a piezoelectric sensor to the door release button of the microwave, we are able to know when the microwave is being used. 
 
 - **Door Sensor (My Creation)**
-By creating an sensor mounted above the door next to the kitchen with two ultrasonic sensors and an ESP32, we are able to tell when someone either enters or exits the room through the stairwell. In the final product, due to technical issues, the door sensor is simplified to one ultrasonic sensor and indicates when there is movement under the door frame.
-
+By creating an sensor mounted above the door next to the kitchen with two ultrasonic sensors and an ESP32, we are able to tell when someone either enters or exits the room through the stairwell. In the final product, due to technical issues, the door sensor is simplified to one ultrasonic sensor and indicates when there is movement under the door frame. The frame was built from a L bracket and Ultrasonic Sensor mount. It holds the sensor, ESP32, and a LiPo battery (see Technical Difficulties section)
 
 ![alt text][doorsensor]
 
 [doorsensor]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/ultrasonicdoor.jpg "Ultrasonic Door Sensor"
   
 **Implementation:**  
-An ESP32 is connected to the laptop containing the visualization. This ESP uses the same PainlessMesh system for communication, but instead of sending messages it simply listens for all incoming data. The data is read over serial in a Processing visualization.  
+An ESP32 is connected to the laptop containing the visualization. This ESP uses the same PainlessMesh system for communication, but instead of sending messages it simply listens for all incoming data. The data is read over serial in a Processing visualization. This code is in the "messageReader" folder.
 
 ![alt text][init]
 
 [init]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/initialmap.jpg "Initial Mapping Overview"
 
-The Processing visualization first allows for the mapping of the space, as a user draws rectangles with the mouse. When the user is finished, the keypress of 'g' will remove the crosshairs and allow the rectangles to be the main event. Users can also manually change the colors as if sensors were being activated, with keys of 'f', 'm', 'c', and 'd' for the fridge, microwave, cabinet, and door respectively.  
+The Processing visualization first allows for the mapping of the space, as a user draws rectangles with the mouse. When the user is finished, the keypress of 'g' will remove the crosshairs and allow the rectangles to be the main event. Users can also manually change the colors as if sensors were being activated, with keys of 'f', 'm', 'c', and 'd' for the fridge, microwave, cabinet, and door respectively. The rectangles are assigned colors with differing randomness of RGB levels based on the sensor input and desired color palette. This visualization can be found in the "kitchenfun_projection" folder. 
+
+The ultrasonic sensor code can be found in the "ultraSense" folder. All other sensor code can be found in the "Other Sensors" folder. 
 
 ## Visualization  
 For my visualization, I wanted to play with the blandness of the AKW Lounge Kitchen. The cabinets are a stark white, as are many of the applicances. The lounge is always a place of academic stress, where many departments hold office hours and people work on PSETs many hours into the night. Why not try to bring splashes of color into the space and make it fun?  
+
+![alt text][work]
+
+[work]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/kitchen2.png "Hard At Work"
 
 As a result, I decided to use code that I had used to map out the Becton Cafe LED wall in order to accurately map out all the surfaces I wanted to project color on in the kitchen. A projector is placed across the kitchen near the window area, and the kitchen provides as a wonderful canvas for the visualization. I used the mesh network setup in order to change the color palette of the space based on which sensors were activated.  
 
