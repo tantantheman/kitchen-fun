@@ -71,8 +71,8 @@ While the design of the ultrasonic sensor involved a small LiPo battery, the LiP
 
 [techlipo]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/ultrainitial.jpeg "Initial Design"
 
-PainlessMesh, despite the name, is not painless at all. There were latency issues we discovered during the A.K. Watson takeover, as the visualization did not always correspond to the sensor data in realtime due to unknown reasons. In addition, when all the members of our group deployed some sort of visualization or sonification, we noticed that our various creations would respond differently to different ESP nodes. This made our different creations respond slightly differently.
+PainlessMesh, despite the name, is not painless at all. There were latency issues we discovered during the A.K. Watson takeover, as the visualization did not always correspond to the sensor data in realtime due to unknown reasons. In addition, when all the members of our group deployed some sort of visualization or sonification, we noticed that our various creations would respond differently to different ESP nodes. This made our different creations respond slightly differently. 
 
 **Video**  
-A video of the KnöchBox in action can be found here:  
-https://youtu.be/6DZXhUA5q48  
+A video of the visualization in action can be found here:
+https://youtu.be/y98uOa5aetE
