@@ -23,7 +23,7 @@ By transforming the handle of the refridgerator into a giant capacitive touch su
 - Piezoelectric Sensor
 By attaching a piezoelectric sensor to the door release button of the microwave, we are able to know when the microwave is being used. 
 
-**- Door Sensor (My Creation)**
+- **Door Sensor (My Creation)**
 By creating an sensor mounted above the door next to the kitchen with two ultrasonic sensors and an ESP32, we are able to tell when someone either enters or exits the room through the stairwell. In the final product, due to technical issues, the door sensor is simplified to one ultrasonic sensor and indicates when there is movement under the door frame.
 
 
