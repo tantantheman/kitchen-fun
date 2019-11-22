@@ -46,7 +46,7 @@ For my visualization, I wanted to play with the blandness of the AKW Lounge Kitc
 
 ![alt text][work]
 
-[work]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/kitchen2.png "Hard At Work"
+[work]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/kitchen2.jpg "Hard At Work"
 
 As a result, I decided to use code that I had used to map out the Becton Cafe LED wall in order to accurately map out all the surfaces I wanted to project color on in the kitchen. A projector is placed across the kitchen near the window area, and the kitchen provides as a wonderful canvas for the visualization. I used the mesh network setup in order to change the color palette of the space based on which sensors were activated.  
 
