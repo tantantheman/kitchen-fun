@@ -2,7 +2,7 @@
 
 ![alt text][intro]
 
-[intro]: https://github.com/tantantheman/tantan-knochbox/blob/master/photos/knochoverview.jpeg "Knochbox Overview"
+[intro]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/colormapping.png "Takeover Overview"
 
 A visualization and mesh network for class. Module 6, Task 2 (Distributed Networks).  
 Programming in Arduino IDE and Processing.  
@@ -53,6 +53,8 @@ When someone passes through the door next to the lounge, the rectangles erupt in
 This was perhaps the most complex module in terms of execution. As a result, there were a few technical difficulties during the creation of the mesh network sensor and the visualization.  
 
 While the design of the ultrasonic sensor involved a small LiPo battery, the LiPo battery stopped taking a charge and thus a portable battery pack had to be swapped in during the actual deployment. In addition, the sensor initially had two ultrasonic sensors next to each other, and was able to detect entrance or exit from the doorway. However, there was an unknown issue with the wiring that prevented the second sensor from working properly. 
+
+
 
 PainlessMesh, despite the name, is not painless at all. There were latency issues we discovered during the A.K. Watson takeover, as the visualization did not always correspond to the sensor data in realtime due to unknown reasons. In addition, when all the members of our group deployed some sort of visualization or sonification, we noticed that our various creations would respond differently to different ESP nodes. This made our different creations respond slightly differently.
 
