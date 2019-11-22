@@ -34,6 +34,10 @@ By creating an sensor mounted above the door next to the kitchen with two ultras
 **Implementation:**  
 An ESP32 is connected to the laptop containing the visualization. This ESP uses the same PainlessMesh system for communication, but instead of sending messages it simply listens for all incoming data. The data is read over serial in a Processing visualization.  
 
+![alt text][init]
+
+[init]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/initialmap.jpg "Initial Mapping Overview"
+
 The Processing visualization first allows for the mapping of the space, as a user draws rectangles with the mouse. When the user is finished, the keypress of 'g' will remove the crosshairs and allow the rectangles to be the main event. Users can also manually change the colors as if sensors were being activated, with keys of 'f', 'm', 'c', and 'd' for the fridge, microwave, cabinet, and door respectively.  
 
 ## Visualization  
@@ -42,6 +46,10 @@ For my visualization, I wanted to play with the blandness of the AKW Lounge Kitc
 As a result, I decided to use code that I had used to map out the Becton Cafe LED wall in order to accurately map out all the surfaces I wanted to project color on in the kitchen. A projector is placed across the kitchen near the window area, and the kitchen provides as a wonderful canvas for the visualization. I used the mesh network setup in order to change the color palette of the space based on which sensors were activated.  
 
 When the microwave sensor is activated, the color palette of the space transforms into warm hues of red and pink. The reds and pinks change as the microwave continues to be used.  
+
+![alt text][pink]
+
+[pink]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/pinkmapping.png "Pink Mapping"
 
 When the fridge sensor is activated, the color palette of the space changes into cool shades of green.  
 
@@ -54,7 +62,9 @@ This was perhaps the most complex module in terms of execution. As a result, the
 
 While the design of the ultrasonic sensor involved a small LiPo battery, the LiPo battery stopped taking a charge and thus a portable battery pack had to be swapped in during the actual deployment. In addition, the sensor initially had two ultrasonic sensors next to each other, and was able to detect entrance or exit from the doorway. However, there was an unknown issue with the wiring that prevented the second sensor from working properly. 
 
+![alt text][techlipo]
 
+[techlipo]: https://github.com/tantantheman/kitchen-fun/blob/master/documentation/ultrainitial.jpeg "Initial Design"
 
 PainlessMesh, despite the name, is not painless at all. There were latency issues we discovered during the A.K. Watson takeover, as the visualization did not always correspond to the sensor data in realtime due to unknown reasons. In addition, when all the members of our group deployed some sort of visualization or sonification, we noticed that our various creations would respond differently to different ESP nodes. This made our different creations respond slightly differently.
 
